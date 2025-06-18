@@ -10,7 +10,7 @@ export default [
     config: {
       origin: [
         'http://localhost:3000',        // your Next.js dev URL
-        'https://ivan825.github.io/design_2_rockmetric', // your GitHub Pages URL
+        'https://rockmetricdes-2.netlify.app', // your GitHub Pages URL
       ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS', 'HEAD'],
       headers: ['*'],
