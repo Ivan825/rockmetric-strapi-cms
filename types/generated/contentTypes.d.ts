@@ -422,16 +422,13 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     date: Schema.Attribute.Date;
     excerpt: Schema.Attribute.Text;
     featured: Schema.Attribute.Boolean;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     readTime: Schema.Attribute.String;
-    slug: Schema.Attribute.UID;
+    slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
